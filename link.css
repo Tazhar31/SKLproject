@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(images/bglp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Logo section */
+.logo .circle {
+    width: 90px;
+    height: 90px;
+    object-fit: fill;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.circle img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo h1 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.logo p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 35px;
+}
+
+/* Glass buttons */
+.links a {
+    display: block;
+    margin: 14px 0;
+    padding: 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.35s ease;
+}
+
+/* Hover animation */
+.links a:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Social icons */
+.socials {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 22px;
+    opacity: 0.85;
+}
+
+.socials a {
+    display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px;
+    border: 2px solid azure; border-radius: 50%; font-size: 20px; color: azure;
+    overflow: hidden; transition: .5s; position: relative; z-index: 1;
+}
+.socials a:hover { color: #081b29; }
+.socials a::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: azure;
+    z-index: -1; transition: .5s;
+}
+.socials a:hover::before { width: 100%; }
+
+.back {
+    margin-top: 20px;
+    font-size: 14px;
+    border: azure 1px solid;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.35s ease;
+}
+
+.back a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 700;
+}

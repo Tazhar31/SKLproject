@@ -127,3 +127,12 @@ window.onscroll = () => {
         document.getElementById('menu-icon').classList.remove('bx-x');
     }
 };
+
+    function kevin() {
+  alert("Kenalan yuk sama aku, namaku Ryatsah Fatih Al Muntazhar atau biasa dipanggil Amon");
+  let q = prompt("Nama kamu siapa?");
+  if (q) {
+    alert("Senang kenal kamu, " + q + "! Kalau mau kenal aku lebih jauh, bisa cek di bagian About Me ya!");
+  
+  }
+}

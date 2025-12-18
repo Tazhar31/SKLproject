@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fatih Al Muntazhar | Frontend Developer</title>
-    
+    <link rel="icon" type="image/png" href="images/n.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <link rel='stylesheet' href='style.css'>
@@ -46,8 +46,8 @@
             <h3>And I'm a <span class="typing-text">Frontend Developer</span></h3>
             
             <div class="btn-box">
-                <a href="#">Hire Me</a>
-                <a href="#">Let's Talk!</a>
+                <a href="#" class="btn-view" onclick="kevin()">Hire Me</a>
+                <a href="https://wa.me/6285183126064" target="_blank" class="btn-view">Let's Talk!</a>
             </div>
         </div>
         
@@ -55,7 +55,7 @@
             <a href="#"><i class='bx bxl-linkedin'></i></a>
             <a href="#"><i class='bx bxl-github'></i></a>
             <a href="https://www.instagram.com/rfttha._/" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://wa.me/6285183126064"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://wa.me/6285183126064" target="_blank"><i class='bx bxl-whatsapp'></i></a>
         </div>
     </section>
 
@@ -69,7 +69,7 @@
         <div class="about-content">
             <h3>I am a passionate <span class="typing-text-2">Frontend Developer</span></h3>
             <p>Saya adalah seorang pengembang frontend yang bersemangat dalam menciptakan antarmuka pengguna yang menarik dan fungsional. Saya memiliki pengalaman dalam HTML, CSS, JavaScript, dan berbagai framework modern.</p>
-            <a href="#contact" class="btn">Let's Talk!</a>
+            <a href="link.html" class="btn">Let's Talk!</a>
         </div>
     </section>
 
@@ -95,8 +95,28 @@
                 <span class="skill-percentage">75%</span>
             </div>
             <div class="skill-box">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="36" height="36"  
+                    fill="#00abf0" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.6 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-.39 16.5c-2.95 0-4.86-2.21-4.86-5.56 0-4.32 2.99-7.45 6.36-7.45 2.04 0 3.25 1.03 3.25 2.42s-1.04 2.46-1.93 2.46c-.22 0-.33-.11-.33-.29 0-.4.64-1 .64-2.13 0-.95-.58-1.55-1.53-1.55-2.04 0-4.36 2.41-4.36 6.58 0 2.46 1.22 4.24 3.19 4.24 1.71 0 3.18-1.22 4.03-2.96.08-.15.15-.22.23-.22.12 0 .23.1.23.33 0 1.01-1.81 4.12-4.94 4.12Z"></path>
+                </svg>
+                <h3>Canva</h3>
+                <div class="skill-bar"><div class="skill-progress" data-progress="75%"></div></div>
+                <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-box">
                 <i class='bx bxl-figma'></i>
                 <h3>Figma</h3>
+                <div class="skill-bar"><div class="skill-progress" data-progress="60%"></div></div>
+                <span class="skill-percentage">60%</span>
+            </div>
+            <div class="skill-box">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="36" height="36"  
+fill="#00abf0" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.6 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M9.585 11.692h4.328s2.432.039 2.432-2.35V5.391S16.714 3 11.936 3C7.362 3 7.647 4.983 7.647 4.983l.006 2.055h4.363v.617H5.92s-2.927-.332-2.927 4.282 2.555 4.45 2.555 4.45h1.524v-2.141s-.083-2.554 2.513-2.554m-.056-5.74a.784.784 0 1 1 0-1.57.784.784 0 1 1 0 1.57"></path><path d="M18.452 7.532h-1.524v2.141s.083 2.554-2.513 2.554h-4.328s-2.432-.04-2.432 2.35v3.951s-.369 2.391 4.409 2.391c4.573 0 4.288-1.983 4.288-1.983l-.006-2.054h-4.363v-.617h6.097s2.927.332 2.927-4.282-2.555-4.451-2.555-4.451m-3.981 10.436a.784.784 0 1 1 0 1.57.784.784 0 1 1 0-1.57"></path>
+</svg>
+                <h3>Python</h3>
                 <div class="skill-bar"><div class="skill-progress" data-progress="60%"></div></div>
                 <span class="skill-percentage">60%</span>
             </div>
@@ -108,11 +128,11 @@
         
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="images/English Project.png" alt="Website Template Project">
+                <img src="images/English Project.png" alt="English project">
                 <div class="project-info">
                     <p class="title">English Project</p>
-                    <p class="desc">Membuat template landing page responsif menggunakan HTML dan CSS.</p>
-                    <a href="#" class="btn-view">View Project</a>
+                    <p class="desc">Portofolio presentasi dan karya tulis kreatif dalam format bahasa Inggris.</p>
+                    <a href="link.html" class="btn-view">View Project</a>
                 </div>
             </div>
             <div class="portfolio-box">
@@ -120,23 +140,31 @@
                 <div class="project-info">
                     <p class="title">Diniyyah Project</p>
                     <p class="desc">Mengembangkan antarmuka keranjang belanja interaktif dengan JavaScript.</p>
-                    <a href="#" class="btn-view">View Project</a>
+                    <a href="link.html" class="btn-view">View Project</a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="images/Tahfidz Project.png" alt="diniyyah Project">
+                <img src="images/Tahfidz Project.png" alt="Tahfidz Project">
                 <div class="project-info">
                     <p class="title">Tahfidz Project</p>
-                    <p class="desc">Mengembangkan antarmuka keranjang belanja interaktif dengan JavaScript.</p>
-                    <a href="#" class="btn-view">View Project</a>
+                    <p class="desc">Rekaman setoran hafalan (murottal) Juz 30 dengan tajwid yang benar.</p>
+                    <a href="link.html" class="btn-view">View Project</a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="images/Website project.png" alt="diniyyah Project">
+                <img src="images/Website project.png" alt="website Project">
                 <div class="project-info">
                     <p class="title">Website Project</p>
-                    <p class="desc">Mengembangkan antarmuka keranjang belanja interaktif dengan JavaScript.</p>
-                    <a href="#" class="btn-view">View Project</a>
+                    <p class="desc">Eksperimen pembuatan elemen web seperti navigasi, form, dan tata letak (layouting) menggunakan kode murni.</p>
+                    <a href="link.html" class="btn-view">View Project</a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/Arabic.png" alt="arabic Project">
+                <div class="project-info">
+                    <p class="title">Arabic Project</p>
+                    <p class="desc">Karya tulis dan rekaman dialog tematik menggunakan bahasa Arab fashih.</p>
+                    <a href="link.html" class="btn-view">View Project</a>
                 </div>
             </div>
         </div>
@@ -159,8 +187,27 @@
     </section>
 
     <footer>
-        <p>Copyright &copy; 2025 by <span>Fatih Al Muntazhar</span> | All Rights Reserved.</p>
-    </footer>
+    <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portofolio</a>
+        <a href="#contact">Contact Me</a>
+        
+    </div>
+
+    <div class="footer-social">
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+        <a href="#"><i class='bx bxl-github'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+    
+    <div class="footer-copyright">
+        &copy; 2025 Fatih Al Muntazhar Inc. All rights reserved.
+    </div>
+</footer>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="main.js"></script>
