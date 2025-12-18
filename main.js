@@ -128,7 +128,7 @@ window.onscroll = () => {
     }
 };
 
-    function kevin() {
+    function amon() {
   alert("Kenalan yuk sama aku, namaku Ryatsah Fatih Al Muntazhar atau biasa dipanggil Amon");
   let q = prompt("Nama kamu siapa?");
   if (q) {
