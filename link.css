@@ -1,132 +1,180 @@
+/* Reset & Base Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background-image: url(images/bglp.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #a81c2c; /* Warna merah tua dominan ala contoh */
+    background-image: linear-gradient(135deg, #8a1420 25%, transparent 25%), 
+                      linear-gradient(225deg, #8a1420 25%, transparent 25%);
+    background-size: 100% 100%;
+    color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: white;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+    overflow-x: hidden;
+    position: relative;
 }
 
+/* Container Utama */
 .container {
     width: 100%;
-    max-width: 420px;
-    text-align: center;
-    padding: 40px 20px;
+    max-width: 480px; /* Ukuran pas buat tampilan mobile / smartphone */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
-/* Logo section */
-.logo .circle {
-    width: 90px;
-    height: 90px;
-    object-fit: fill;
+/* Dekorasi Bulat-Bulat di Background Kiri */
+.bg-decoration {
+    position: absolute;
+    left: -40px;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transform: rotate(-15deg);
+}
+
+.bg-decoration .dot {
+    width: 18px;
+    height: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar-wrapper {
+    width: 96px;
+    height: 96px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 12px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.username {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Judul Kategori Pemisah */
+.category-title {
+    width: 100%;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 5px;
+    color: rgba(255, 255, 255, 0.9);
+    border-left: 3px solid #ffffff;
+    padding-left: 8px;
+}
+
+/* List Links (Tombol Putih) */
+.links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-card {
+    background-color: #ffffff;
+    color: #333333;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
+    border-radius: 4px; /* Sudut agak kotak sedikit melengkung sesuai foto */
+    overflow: hidden;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.15); /* Efek shadow tebal di bawah */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.circle img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+.link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0px rgba(0, 0, 0, 0.18);
 }
 
-.logo h1 {
-    font-size: 22px;
-    margin-bottom: 6px;
-}
-
-.logo p {
-    font-size: 14px;
-    opacity: 0.8;
-    margin-bottom: 35px;
-}
-
-/* Glass buttons */
-
-.links p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-    padding-bottom: 6px;
-    text-align: left;
-        
-}
-
-.links a {
-    display: block;
-    margin: 14px 0;
-    padding: 16px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: azure;
-    font-weight: 700;
-    background: rgba(255, 255, 255, 0.192);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
-    transition: all 0.35s ease;
-}
-
-/* Hover animation */
-.links a:hover {
-    transform: translateY(-4px) scale(1.02);
-    background: rgba(255, 255, 255, 0.55);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
-
-/* Social icons */
-.socials {
-    margin-top: 35px;
+/* Kotak Ikon di Dalam Tombol */
+.icon-area {
+    background-color: #8a1420; /* Warna merah dalem kotak ikon */
+    color: #ffffff;
+    width: 55px;
+    height: 55px;
     display: flex;
     justify-content: center;
-    gap: 25px;
-    font-size: 22px;
-    opacity: 0.85;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+/* Teks di Dalam Tombol */
+.text-area {
+    flex: 1;
+    padding: 0 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222222;
+}
+
+/* Footer & Navigasi */
+.footer-section {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .socials a {
-    display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px;
-    border: 2px solid azure; border-radius: 50%; font-size: 20px; color: azure;
-    overflow: hidden; transition: .5s; position: relative; z-index: 1;
-}
-.socials a:hover { color: #081b29; }
-.socials a::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: azure;
-    z-index: -1; transition: .5s;
-}
-.socials a:hover::before { width: 100%; }
-
-.back {
-    margin-top: 20px;
-    font-size: 14px;
-    border: azure 1px solid;
-    padding: 8px 12px;
-    border-radius: 20px;
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    transition: all 0.35s ease;
-}
-
-.back a {
+    color: #ffffff;
+    font-size: 2rem;
     text-decoration: none;
-    color: #2b2b2b;
-    font-weight: 700;
+    transition: opacity 0.2s;
+}
+
+.socials a:hover {
+    opacity: 0.8;
+}
+
+.back-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+}
+
+.back-nav a:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
 }
