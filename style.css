@@ -26,7 +26,7 @@
     --main-color: #0088cc;
     --text-color: #333;
     --second-bg-color: #ffffff;
-    --bg-color-opacity: rgba(240, 242, 245, 0.85);
+    --bg-color-opacity: rgba(240, 242, 245, 0.529);
     --footer-color: #3333335d;
     --cr-color: rgba(0, 0, 0, 0.7);
 }
@@ -80,10 +80,11 @@ body {
 /* --- HEADER AND NAVIGATION --- */
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 10px;
+    left: 200px;
+    right: 200px;
     padding: 1.5rem 9%;
+    border-radius: 10px;
     background: var(--bg-color-opacity);
     backdrop-filter: blur(5px);
     display: flex;
@@ -280,17 +281,21 @@ footer p span { color: var(--main-color); }
 
 @media (max-width: 768px) {
     body { padding-top: 4rem; }
-    .header { padding: 1rem 3%; }
+    .header { padding: 1rem 3%; right: 30px; left: 30px; }
+    .logo { font-size: 20px; }
     
     .menu-icon { display: block; order: 3; }
+        
+    .menu-icon { display: block; font-size: 20px; color: var(--main-color); cursor: pointer; } 
+    .mode-switcher { font-size: 16px; color: var(--main-color); cursor: pointer; margin-left: 20px; }
     .navbar-wrapper { order: 2; }
 
     .navbar {
-        position: absolute; top: 100%; left: 0; width: 100%; padding: 0; background: var(--bg-color);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;
+        position: absolute; top: 100%; left: 0; width: 100%; padding: 0; background: var(--bg-color-opacity);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; border-radius: 10px;
     }
     .navbar ul { flex-direction: column; align-items: center; gap: 10px; }
-    .navbar.active { max-height: 250px; padding: 1rem 0; }
+    .navbar.active { max-height: 250px; padding: 1rem 0;}
     
     .home { flex-direction: column; justify-content: space-around; text-align: center; background: var(--bg-color); padding: 8rem 3% 3rem; }
     .home-content { max-width: 100%; }
